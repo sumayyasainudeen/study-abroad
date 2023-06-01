@@ -1,0 +1,211 @@
+<!DOCTYPE html>
+<html lang="en" style="scroll-behavior: smooth;">
+
+<head>
+    {% load static %}
+    <link rel="stylesheet" type="text/css" href="{% static 'css/style.css' %}">
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css">
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.16.0/umd/popper.min.js"></script>
+    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.5.2/js/bootstrap.min.js"></script>
+    <title>{% block title %}{% endblock %}</title>
+    <link rel="icon" href="{% static 'images/u11.jpg' %}" type="image/icon type">
+    <link rel="stylesheet" href="path/to/font-awesome/css/font-awesome.min.css">
+    <script src="https://kit.fontawesome.com/ca2474264d.js" crossorigin="anonymous"></script>
+    <link href="https://fonts.googleapis.com/css?family=Lato" rel="stylesheet">
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.0/css/bootstrap.min.css">
+
+</head>
+
+<body>
+    <style>
+         :root {
+            --heading: rgb(255, 153, 0);
+            --foot: #0F172B;
+
+        }
+        .navbar-dark .navbar-nav .nav-link:hover,
+        .navbar-dark .navbar-nav .nav-link.active {
+            color: var(--heading);
+        }
+
+        @media (max-width: 991.98px) {
+            .navbar-dark .navbar-nav .nav-link {
+                margin-right: 0;
+                padding: 10px 0;
+            }
+        }
+
+        .carousel-caption {
+            top: 0;
+            left: 0;
+            right: 0;
+            bottom: 0;
+            background: rgba(15, 23, 43, .7);
+            z-index: 1;
+        }
+
+        .carousel-control-prev,
+        .carousel-control-next {
+            width: 10%;
+        }
+
+        .carousel-control-prev-icon,
+        .carousel-control-next-icon {
+            width: 3rem;
+            height: 3rem;
+        }
+
+        .booking {
+            position: relative;
+            margin-top: -100px !important;
+            z-index: 1;
+        }
+
+       
+    </style>
+    <header>
+        <div class="container-fluid bg-dark px-0">
+          <div class="row gx-0">
+            <div class="col-lg-4 bg-dark d-none d-lg-block">
+              <!-- Logo -->
+              <a href="index.html" class="navbar-brand w-100 h-100 m-0 p-0 d-flex align-items-center justify-content-center">
+                <h1 class="m-0" style="font-family: Lucida Handwriting; font-size: 2.6rem;color: var(--heading);animation: blinkAnimation 1s infinite alternate;">studyAbroad</h1>
+              </a>
+            </div>
+            <div class="col-lg-8">
+              <div class="row gx-0 bg-white d-none d-lg-flex">
+                <div class="col-lg-7 px-5 text-start">
+                  <!-- Contact information -->
+                  <div class="h-100 d-inline-flex align-items-center py-2 me-4">
+                    <i class="fa fa-envelope me-2" style="color: var(--heading);"></i>
+                    <p class="mb-0">studyabroad@gmail.com</p>
+                  </div>
+                  <div class="h-100 d-inline-flex align-items-center py-2">
+                    <i class="fa fa-phone-alt me-2" style="color: var(--heading);"></i>
+                    <p class="mb-0">+91 974 345 6789</p>
+                  </div>
+                </div>
+                <div class="col-lg-5 px-5 text-end">
+                  <!-- Social media icons -->
+                  <div class="d-inline-flex align-items-center py-2">
+                    <a class="me-3" href=""><i class="fab fa-facebook-f mx-2" style="color: var(--heading);"></i></a>
+                    <a class="me-3" href=""><i class="fab fa-twitter mx-2" style="color: var(--heading);"></i></a>
+                    <a class="me-3" href=""><i class="fab fa-linkedin-in mx-2" style="color: var(--heading);"></i></a>
+                    <a class="me-3" href=""><i class="fab fa-instagram mx-2" style="color: var(--heading);"></i></a>
+                    <a class="" href=""><i class="fab fa-youtube mx-2" style="color: var(--heading);"></i></a>
+                  </div>
+                </div>
+              </div>
+              <nav class="navbar navbar-expand-lg bg-dark navbar-dark p-3 p-lg-0">
+                <!-- Logo for small screens -->
+                <a href="#" class="navbar-brand d-block d-lg-none">
+                  <h1 class="m-0 text-uppercase" style="color: var(--heading);">studyAbroad</h1>
+                </a>
+                <button type="button" class="navbar-toggler" data-toggle="collapse" data-target="#navbarCollapse">
+                  <span class="navbar-toggler-icon"></span>
+                </button>
+                <div class="collapse navbar-collapse justify-content-between" id="navbarCollapse" style="font-family: Verdana;">
+                  <!-- Navigation links -->
+                  <div class="navbar-nav mr-auto py-0 text-uppercase">
+                    <a href="#" class="nav-item nav-link active" style="color: var(--heading);"><i class="fas fa-home"></i></a>
+                    <a href="{% url 'index' %}#sec_about" class="nav-item nav-link">About</a>
+                    <a href="{% url 'index' %}#sec_destinations" class="nav-item nav-link">study abroad</a>
+                    <a href="{% url 'index' %}#sec_academy" class="nav-item nav-link">Find Course</a>
+                    <a href="{% url 'index' %}#sec_service" class="nav-item nav-link">services</a>
+                    <a href="{% url 'index' %}#sec_contact" class="nav-item nav-link">Contact</a>
+                  </div>
+                  <a href="" class="btn rounded-0 py-4 px-md-5 d-none d-lg-block" style="background-color: var(--heading);">
+                    Take Premium&nbsp;<i class="fa fa-arrow-right ms-3"></i>
+                  </a>
+                </div>
+              </nav>
+            </div>
+          </div>
+        </div>
+      </header>
+
+    <!-- Header End -->
+<!-- <div style="padding-top: 115px;"> -->
+
+    {% block content %}
+
+    {% endblock %}
+
+<!-- </div> -->
+   
+<script src="https://stackpath.bootstrapcdn.com/bootstrap/4.5.0/js/bootstrap.min.js"></script>
+
+    <style>
+       
+
+        .animated {
+            animation-duration: 1s;
+            animation-fill-mode: both;
+        }
+
+        @keyframes slideInDown {
+            from {
+                transform: translate3d(0, -100%, 0);
+                visibility: visible;
+            }
+
+            to {
+                transform: translate3d(0, 0, 0);
+            }
+        }
+
+        .slideInDown {
+            animation-name: slideInDown;
+        }
+
+        @keyframes slideInLeft {
+            from {
+                transform: translate3d(-100%, 0, 0);
+                visibility: visible;
+            }
+
+            to {
+                transform: translate3d(0, 0, 0);
+            }
+        }
+
+        .slideInLeft {
+            animation-name: slideInLeft;
+        }
+
+        @keyframes slideInRight {
+            from {
+                transform: translate3d(100%, 0, 0);
+                visibility: visible;
+            }
+
+            to {
+                transform: translate3d(0, 0, 0);
+            }
+        }
+
+        .slideInRight {
+            animation-name: slideInRight;
+        }
+
+        @keyframes fadeIn {
+            from {
+                opacity: 0;
+            }
+
+            to {
+                opacity: 1;
+            }
+        }
+
+        .fadeIn {
+            animation-name: fadeIn;
+        }
+    </style>
+
+</body>
+
+</html>
